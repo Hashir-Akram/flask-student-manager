@@ -81,6 +81,13 @@ def update_student(student_id):
     return "Student not found", 404
 
 
+
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
+
+
 if __name__ == '__main__':
     with app.app_context(): 
         db.create_all()
