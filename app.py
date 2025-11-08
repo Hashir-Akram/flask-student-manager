@@ -19,8 +19,9 @@ class Student(db.Model):
     email = db.Column(db.String(100), nullable=False)
 
 
-with app.app_context(): 
+ with app.app_context(): 
     db.create_all()
+
 
 
 @app.route('/')
@@ -92,5 +93,6 @@ def services():
 
 
 if __name__ == '__main__':
+   
 
     app.run(debug=True)
